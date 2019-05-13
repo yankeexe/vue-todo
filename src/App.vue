@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import Search from '../src/components/Search.vue';
 module.exports = {
   data: function() {
     return {
@@ -48,7 +47,7 @@ module.exports = {
       this.index = i
       this.$refs.myTodo.value = todo
     }, 
-    handleEdited: function(i) {
+    handleEdited: function() {
       this.edit = false
       this.todos[this.index] = this.$refs.myTodo.value
       localStorage.setItem("todos", JSON.stringify(this.todos))
